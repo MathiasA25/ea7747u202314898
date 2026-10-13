@@ -1,0 +1,16 @@
+<mat-toolbar class="toolbar" role="banner">
+  <a class="toolbar__brand" routerLink="/home" [attr.aria-label]="'toolbar-brand-label' | translate">
+    <img class="toolbar__logo" [src]="logoUrl" alt="CERN" />
+    <span class="toolbar__title">{{ 'toolbar-title' | translate }}</span>
+  </a>
+
+  <nav class="toolbar__navigation" [attr.aria-label]="'toolbar-navigation-label' | translate">
+    @for (option of navigationOptions; track option.path) {
+      <a mat-button [routerLink]="option.path" routerLinkActive="toolbar__link--active" ariaCurrentWhenActive="page">
+        {{ option.labelKey | translate }}
+      </a>
+    }
+  </nav>
+
+  <app-language-switcher />
+</mat-toolbar>
