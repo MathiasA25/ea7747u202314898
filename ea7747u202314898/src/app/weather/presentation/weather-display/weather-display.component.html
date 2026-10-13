@@ -1,0 +1,19 @@
+<div class="weather-display" aria-label="Weather Information">
+
+  <span class="weather-icon" aria-hidden="true">🌡️</span>
+
+  <span class="weather-label">Current Temperature:</span>
+
+  <span class="weather-value" *ngIf="temperature !== null; else loading">
+
+    {{ temperature }} °C
+
+  </span>
+
+  <ng-template #loading>
+
+    <span class="weather-loading">Loading weather...</span>
+
+  </ng-template>
+
+</div>
