@@ -1,13 +1,14 @@
 import {WeatherResponseResource} from './current-weather-resource';
 
 /**
- *Current weather assembler
+ *Current weather assembler in this
  * @author Mathias Acuache
  */
-export class CurrentWeatherAssembler{
+export class WeatherAssembler{
 
   public static toTemperature(resource: WeatherResponseResource):number {
     return resource.current.temperature_2m
   }
 
 }
+
