@@ -10,7 +10,6 @@ export class WeatherApi {
   private baseUrl: "https://api.open-meteo.com/v1/forecast";
 
   public getCurrentTemperature(latitude: number, longitude: number): Observable<number>{
-    const url = `${this.baseUrl}?latitude=${latitude}&longitude=${longitude}`;
-    return this.http.get(url);
+    const url = `${this.baseUrl}?latitude=${latitude}&longitude=${longitude}&current=tempera`;
   }
 }
